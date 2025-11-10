@@ -71,7 +71,6 @@ jobs:
               -e SPRING_PROFILES_ACTIVE=prod \
               -e SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI="${{ secrets.AUTH0_ISSUER }}" \
               -e SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_AUDIENCE="${{ secrets.AUTH0_AUDIENCE }}" \
-              # se usar MySQL, mantenha as duas linhas abaixo (caso contrário, comente/remova)
               -e MYSQL_HOST=${{ secrets.MYSQL_HOST }} \
               -e MYSQL_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
               ${{ env.IMAGE_NAME }}:latest
